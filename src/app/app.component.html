@@ -1,0 +1,21 @@
+<div id="one">
+  <form>
+    <span>Enter key: </span>
+    <input type="text" name="key" [(ngModel)]="key1"><br>
+    <button (click)="onShow()">SHOW</button>
+    <button (click)="onDelete()">DELETE</button>
+    <div id="inner">
+      {{data}}
+    </div>
+  </form>
+</div>
+<div id="two">
+  <form>
+    <span>Enter key: </span>
+    <input type="text" name="key1" [(ngModel)]="key"><br>
+    <span>Enter value: </span>
+    <input type="text" name="val" [(ngModel)]="val"><br>
+    <button (click)="onInsert()">Insert</button>
+    <button (click)="onUpdate()">Update</button>
+  </form>
+</div>

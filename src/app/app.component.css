@@ -1,0 +1,22 @@
+div{
+    height: 400px;
+    width:500px ;
+    display: inline-flex;
+    border: 2px solid rgb(149, 58, 235);
+    background-color: aquamarine;
+    margin: 40px;
+}
+button{
+    margin-top: 10px;
+    margin-left: 40px;
+    background-color: yellow;
+    color: red;
+    border-radius: 5px;
+    height: 30px;
+    width:auto;
+
+}
+#inner{
+    height: auto;
+    width: auto;
+}
