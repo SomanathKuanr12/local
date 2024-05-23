@@ -1,0 +1,34 @@
+<div id="container">
+    <h1>Student Management System</h1>
+    <div id="select">
+        Gender:
+        <select name="gender" [(ngModel)]="filterText">
+            <option value="all">All</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        <input type="text" name="search" [(ngModel)]="searchText" placeholder="search name here">
+    </div>
+    
+    <table class="table table-bordered">
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>Gender</th>
+            <th>DOB</th>
+            <th>FEE</th>
+            <th>MARK</th>
+            <th>PERCENTAGE</th>
+        </tr>
+        <tr *ngFor="let data of students| filter:filterText |search:searchText ">
+            <td>{{data.id}}</td>
+            <td>{{data.name |uppercase}}</td>
+            <td>{{data.gender |uppercase}}</td>
+            <td>{{data.dob |date:'shortDate'}}</td>
+            <td>{{data.fee |currency:'INR'}}</td>
+            <td>{{data.mark}}</td>
+            <td>{{(data.mark/totalMark) |percent:'2.2-2'}}</td>
+        </tr>
+
+    </table>
+</div>

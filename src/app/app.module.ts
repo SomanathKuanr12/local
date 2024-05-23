@@ -3,25 +3,34 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NewComplainComponent } from './new-complain/new-complain.component';
+import { TableComponent } from './table/table.component';
 import { FormsModule } from '@angular/forms';
-import { ComplaintListComponent } from './complaint-list/complaint-list.component';
+import { FilterPipe } from './Pipe/filter.pipe';
+
+import { USDComponent } from './usd/usd.component';
+import { UsdINRPipe } from './Pipe/usd-inr.pipe';
+import { SearchPipe } from './Pipe/search.pipe';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NewComplainComponent,
-    ComplaintListComponent
+    TableComponent,
+    FilterPipe,
+    UsdINRPipe,
+    USDComponent,
+    SearchPipe
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+  
   ],
   providers: [
-    provideClientHydration(),
+    provideClientHydration()
   ],
   bootstrap: [AppComponent]
 })
