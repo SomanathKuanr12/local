@@ -1,0 +1,33 @@
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <td>ID</td>
+            <td>Complaint Against</td>
+            <td>Name</td>
+            <td>Phone no</td>
+            <td>Email</td>
+            <td>City</td>
+            <td>State</td>
+            <td>pin code</td>
+            <td>Description</td>
+            <td>Action</td>
+        </tr>
+    </thead>
+        <tbody>
+            <tr *ngFor="let item of complaintArray ;let j=index">
+                <td>{{j+1}}</td>
+                <td>{{item.aginst}}</td>
+                <td>{{item.name}}</td>
+                <td>{{item.phone}}</td>
+                <td>{{item.email}}</td>
+                <td>{{item.city}}</td>
+                <td>{{item.state}}</td>
+                <td>{{item.pin}}</td>
+                <td>{{item.desc}}</td>
+                <td><button class="btn btn-sm btn-success" (click)="onEdit(item.id)">Edit</button></td>
+                <td><button class="btn btn-sm btn-success" (click)="onDelete(j) ">Delete</button></td>
+            </tr>
+        </tbody>
+   
+</table>

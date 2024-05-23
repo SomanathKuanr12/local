@@ -1,0 +1,42 @@
+<div id="container">
+    <form (submit)="onSubmit()">
+    <div>
+        <span>Complain Against:</span><br>
+        <input type="radio" name="against" value="agent" [(ngModel)]="complaintObj.aginst" >Agent
+        <input type="radio" name="against" value="Hospital" [(ngModel)]="complaintObj.aginst" >Hospital
+        <input type="radio" name="against" value="Others" [(ngModel)]="complaintObj.aginst" >Others
+    </div>
+    <div>
+        <span>Name:</span>
+        <input type="text" [(ngModel)]="complaintObj.name" name="name">
+    </div>
+    <div>
+        <span>Phone no:</span>
+        <input type="text" [(ngModel)]="complaintObj.phone" size="10" name="pnno">
+    </div>
+    <div>
+        <span>Email:</span>
+        <input type="email" [(ngModel)]="complaintObj.email" name="email" >
+    </div>
+    <div>
+        <span>City:</span>
+        <input type="text" [(ngModel)]="complaintObj.city" name="city" >
+    </div>
+    <div>
+        <span>State:</span>
+        <input type="text" [(ngModel)]="complaintObj.state" name="state" >
+    </div>
+    <div>
+        <span>Pin code:</span>
+        <input type="number" [(ngModel)]="complaintObj.pin" name="pin" >
+    </div>
+    <div>
+        <span>Complaint:</span><br>
+        <textarea name="desc" [(ngModel)]="complaintObj.desc" cols="50" rows="3"></textarea>
+    </div>
+    <div id="btn">
+    <button *ngIf="currentId ==0" (click)="onRegister()" class="btn btn-primary">Rgister</button>
+    <button *ngIf="currentId !==0 "  (click)="onUpdate()" class="btn btn-primary">Update</button>
+</div>
+</form>
+</div>
